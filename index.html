@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyecto 1 encriptador</title>
+    <link rel="website icon" type="png" href="Imgs/incono T.png">
+
+    <!--Modularización-->
+    <script src="app.js" type="module"></script>
+    <script src="main.js"></script>
+
+    <!-- Vinculación con el style de BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+
+    <!--Vinculación con VUE JS-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body class="bg-dark">
+    <div id="app">
+
+        <!-- CONTENEDOR ENCABEZADO -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <strong><h1 class="text-light p-4"> PROYECTO #1 ENCRIPTADOR DE TEXTO </h1></strong>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- CONTENEDORES PAG  -->
+
+        <div class="container"> <!-- CONTENEDOR #1 Concepto encriptar  -->
+            <div class="row">
+                <div class="col col-sm-12 col-md-6 bg-warning text-center">
+
+                    <h2 class="p-5"> ENCRIPTACIÓN </h2>
+
+                    <h3 class="text-decoration-underline"> ¿Qué es?</h3> 
+
+                    <p> 
+                        La encriptación es el proceso de "encriptar o cifrar" es decir: <br>
+                        es el proceso de codificar un mensaje o información de modo tal que solo los individuos autorizados sean capaces de acceder a esta, y aquellos que no estén autorizados no puedan hacerlo.
+                    </p>
+
+                    <h3 class="text-decoration-underline"> ¿Para qué sirve?</h3> 
+                    
+                    <p>
+                         sirve para proteger los datos y evitar que se roben, cambien o se vulneren.
+
+                         Una de las mayores ventajas de la encriptación es que asegura la privacidad de la información transmitida. Los únicos que pueden acceder a ese contenido son los usuarios o participantes de ese intercambio de mensajes. Ya sea porque uno es el propietario de los datos o porque los recibe. 
+                    </p>
+
+                </div>
+
+                <div class="col col-sm-12 col-md-6 bg-warning text-center">
+                    
+                    <img src="./imgs/encriptar.png" class="img-fluid" alt="Img encriptar">
+                    
+                </div>
+                
+                <div class="col-12 bg-warning text-center">
+                    
+                    <h2 class="p-3">PROGRAMA</h2>
+                    <h3 class="text-decoration-underline"> Descripción del programa:</h3> 
+                    <p> El programa a continuación es para que usted escriba un texto o un caracter en donde el programa detectará los caracteres y los reemplazará según esté establecido, en este caso reemplazará los siguientes caracteres y biceversa: </p>
+
+                    <table class="table table-primary table-striped">  <!-- Tabla guía de caracteres y reemplazo  -->
+                        <thead>
+                            <tr>
+                              <th scope="col">Caracter</th>
+                              <th scope="col">Reemplazo</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td scope="col">a</td>
+                                <td scope="col">ai</td>
+                            </tr>
+
+                            <tr>
+                                <td scope="col">e</td>
+                                <td scope="col">enter</td>
+                            </tr>
+
+                            <tr>
+                                <td scope="col">i</td>
+                                <td scope="col">imes</td>
+                            </tr>
+
+                            <tr>
+                                <td scope="col">o</td>
+                                <td scope="col">ober</td>
+                            </tr>
+
+                            <tr>
+                                <td scope="col">u</td>
+                                <td scope="col">ufat</td>
+                            </tr>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="container bg-warning"> <!-- CONTENEDOR #2 Encriptador   -->
+            <div class="row">
+                <div class="col-12  text-center"> <!-- Escribir texto -->
+                    <h2>Herramienta para encriptar texto: </h2>
+
+                    <textarea v-model="texto" class="form-control" placeholder="Escribe aquí tu texto 👇"></textarea>
+
+                    <div class="d-flex mb-3">
+                        <div class="p-2"><button @click.prevent="encriptar" type="button" class="btn btn-danger">ENCRIPTAR</button></div>
+                        <div class="p-2"><button @click.prevent="desencriptar" type="button" class="btn btn-success">DESENCRIPTAR</button></div>
+                        <div class="ms-auto p-2"><button @click.prevent="limpiar" type="button" class="btn btn-secondary">LIMPIAR</button></div>
+                    </div>
+
+                </div>
+
+                
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+    <!-- Vinculación con el js de BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
